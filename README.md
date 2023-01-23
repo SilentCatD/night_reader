@@ -102,7 +102,7 @@ Widget build(BuildContext context) {
 This package come with `AnimatedNightReader`, which will automatically animate between value `[0-1]`
 when changing the properties, other property animation is also supported.
 
-But if one's need arise. They can control the not-animated version of this widget: `NightReader`,
-through any method that trigger a `setState`.
+But if one's needs arisen. They can control the not-animated version of this widget: `NightReader`,
+through any method that trigger a `rebuild`.
 
 For more information on each property, please do see the document. 
