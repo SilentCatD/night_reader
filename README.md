@@ -38,7 +38,7 @@ import 'package:night_reader/night_reader.dart';
 <img src="https://github.com/SilentCatD/night_reader/blob/main/assets/night_light_app.gif?raw=true" width="200px">
 
 To make the whole app under the effect, one can simply wrap this widget around `MaterialApp` and
-control the `value` parameter and the whole apps will be affected.
+control the `value` parameter and the whole app will be affected.
 
 ```dart
 @override
