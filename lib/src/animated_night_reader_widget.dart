@@ -2,6 +2,13 @@ import 'package:flutter/material.dart';
 
 import 'night_reader_widget.dart';
 
+/// Animated version of [NightReader]. Will automatically lerp between
+/// [AnimatedNightReader.value]s when [State.setState] with a different value.
+///
+/// The animation of all other properties is also supported. To see document
+/// of each property, see [NightReader] and [ImplicitlyAnimatedWidget].
+///
+/// This widget would require [Curve] and [Duration] for the animation.
 class AnimatedNightReader extends ImplicitlyAnimatedWidget {
   const AnimatedNightReader({
     Key? key,

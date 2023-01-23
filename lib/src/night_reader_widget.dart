@@ -2,7 +2,15 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:night_reader/night_reader.dart';
 
+
+/// Widget that drawing [NightReader.tint] with [BlendMode.darken] to it's
+/// subtree, making a darkened screen effect.
+///
+/// Do note that this widget has nothing (yet) to do with the night-light of
+/// OS/native platform. It just simply apply specific [BlendMode] to it's
+/// children.
 class NightReader extends StatelessWidget {
   const NightReader({
     Key? key,
@@ -19,12 +27,37 @@ class NightReader extends StatelessWidget {
         assert(minTintOpacity >= 0 && minTintOpacity <= maxTintOpacity),
         assert(maxTintOpacity >= minTintOpacity && maxTintOpacity <= 1),
         super(key: key);
+
+  /// The current value of darkened progress, this value must be within range
+  /// [0 - 1]. This property can be animated with [AnimationController] or
+  /// any type of mechanism that trigger a [State.setState]. In case of one
+  /// need to simply animating between values, the use of [AnimatedNightReader]
+  /// should be considered.
   final double value;
+
+  /// The color that this widget will apply to the subtree with specific
+  /// [BlendMode].
   final Color tint;
-  final double minDarkenOpacity;
-  final double maxDarkenOpacity;
+
+  /// At each value of [value], the opacity of [tint] will [lerpDouble] from
+  /// [minTintOpacity] to [maxTintOpacity], making the subtree below this
+  /// widgets blended with such color.
+  ///
+  /// These values must range from [0-1].
   final double minTintOpacity;
   final double maxTintOpacity;
+
+  /// The darkened of the subtree, however, is control by [minDarkenOpacity]
+  /// and [maxDarkenOpacity]. At each value of [value], the subtree will be
+  /// darkened by [lerpDouble] between [minDarkenOpacity] and
+  /// [maxDarkenOpacity], making the screen go darker. Were [maxDarkenOpacity]
+  /// set to 1., the screen will be completely black when [value] is 1.
+  ///
+  /// These values must range from [0-1].
+  final double minDarkenOpacity;
+  final double maxDarkenOpacity;
+
+  /// The subtree/child/widget bellow this widget.
   final Widget child;
 
   @override
