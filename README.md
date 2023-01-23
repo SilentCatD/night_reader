@@ -11,6 +11,8 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
+[![pub package](https://img.shields.io/pub/v/night_reader?color=green&include_prereleases&style=plastic)](https://pub.dev/packages/night_reader)
+
 TODO: Put a short description of the package here that helps potential users
 know whether this package might be useful for them.
 
@@ -25,10 +27,14 @@ start using the package.
 
 ## Usage
 
+<img src="https://github.com/SilentCatD/night_reader/blob/main/assets/night_light_app.gif?raw=true" width="200px">
+<img src="https://github.com/SilentCatD/night_reader/blob/main/assets/night_light_subtree.gif?raw=true" width="200px">
+
 TODO: Include short and useful examples for package users. Add longer examples
 to `/example` folder.
 
 ```dart
+
 const like = 'sample';
 ```
 
