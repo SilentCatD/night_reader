@@ -1,5 +1,6 @@
 name: night_reader
-description: A new Flutter package project.
+description: "Package that implement the Night Light/ Night Reader effect in Flutter. Suitable for apps that need this feature. ex: book apps, blog apps, ..."
+
 version: 1.0.0
 homepage: https://github.com/SilentCatD/night_reader
 issue_tracker: https://github.com/SilentCatD/night_reader/issues
