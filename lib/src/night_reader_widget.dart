@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:night_reader/night_reader.dart';
 
-
 /// Widget that drawing [NightReader.tint] with [BlendMode.darken] to it's
 /// subtree, making a darkened screen effect.
 ///
